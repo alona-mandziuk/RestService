@@ -1,0 +1,4 @@
+package vocabularyRest;
+
+class VocabularyServlet {
+}
