@@ -1,4 +1,4 @@
-package com.example.soapservisewithjdbc.DAO;
+package com.soapservisewithjdbc.DAO;
 
 import java.sql.*;
 import java.util.ArrayList;

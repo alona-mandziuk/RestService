@@ -1,6 +1,6 @@
-package com.example.soapservisewithjdbc.DAO;
+package com.soapservisewithjdbc.DAO;
 
-import com.example.soapservisewithjdbc.RegisterDriver;
+import com.soapservisewithjdbc.RegisterDriver;
 
 public class DAOFactory implements IDAOFactory {
 

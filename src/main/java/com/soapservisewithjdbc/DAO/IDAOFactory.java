@@ -1,4 +1,4 @@
-package com.example.soapservisewithjdbc.DAO;
+package com.soapservisewithjdbc.DAO;
 
 public interface IDAOFactory {
     CarDAO getCarDao();

@@ -5,7 +5,7 @@
          version="5.0">
     <servlet>
         <servlet-name>CarshopServlet</servlet-name>
-        <servlet-class>com.example.soapservisewithjdbc.CarshopServlet</servlet-class>
+        <servlet-class>com.soapservisewithjdbc.CarshopServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>

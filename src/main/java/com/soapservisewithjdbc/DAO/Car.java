@@ -1,4 +1,4 @@
-package com.example.soapservisewithjdbc.DAO;
+package com.soapservisewithjdbc.DAO;
 
 public class Car {
     private int carId;

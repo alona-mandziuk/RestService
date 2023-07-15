@@ -1,8 +1,8 @@
-package com.example.soapservisewithjdbc;
+package com.soapservisewithjdbc;
 
-import com.example.soapservisewithjdbc.DAO.Car;
-import com.example.soapservisewithjdbc.DAO.CarDAO;
-import com.example.soapservisewithjdbc.DAO.DAOFactory;
+import com.soapservisewithjdbc.DAO.Car;
+import com.soapservisewithjdbc.DAO.CarDAO;
+import com.soapservisewithjdbc.DAO.DAOFactory;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import java.io.IOException;
