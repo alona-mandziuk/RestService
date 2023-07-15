@@ -2,7 +2,7 @@ package com.example.soapservisewithjdbc.DAO;
 
 import com.example.soapservisewithjdbc.RegisterDriver;
 
-public class DAOFactory implements IDAOFactory{
+public class DAOFactory implements IDAOFactory {
 
     private static IDAOFactory factory;
 
@@ -10,8 +10,8 @@ public class DAOFactory implements IDAOFactory{
         RegisterDriver.registerDriver();
     }
 
-    public static synchronized IDAOFactory getInstance(){
-        if (factory == null){
+    public static synchronized IDAOFactory getInstance() {
+        if (factory == null) {
             factory = new DAOFactory();
         }
         return factory;

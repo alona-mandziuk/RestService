@@ -4,15 +4,15 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CarJdbcDao implements CarDAO{
-    private static Connection getConnection(){
+public class CarJdbcDao implements CarDAO {
+    private static Connection getConnection() {
         Connection connection = null;
         try {
             connection = DriverManager.getConnection(System.getenv("URL"),
-            System.getenv("USER"), System.getenv("PASSSWORD"));
+                    System.getenv("USER"), System.getenv("PASSWORD"));
             return connection;
 
-        } catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
@@ -20,14 +20,14 @@ public class CarJdbcDao implements CarDAO{
 
     @Override
     public List<Car> getAll() {
-        List <Car> allCars = new ArrayList<>();
+        List<Car> allCars = new ArrayList<>();
         try {
             PreparedStatement statement = getConnection()
                     .prepareStatement("SELECT car_id, mark, model, speed, price, firstname," +
                             "lastname, phone " +
                             "FROM cars INNER JOIN clients ON cars.client_id = clients.id");
             ResultSet resultSet = statement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 int id = resultSet.getInt(1);
                 String mark = resultSet.getString(2);
                 String model = resultSet.getString(3);
@@ -46,13 +46,10 @@ public class CarJdbcDao implements CarDAO{
                 car.setClientLastName(lastName);
                 car.setClientPhone(phoneNumber);
                 allCars.add(car);
-                statement.close();
-
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return allCars;
     }
 }
