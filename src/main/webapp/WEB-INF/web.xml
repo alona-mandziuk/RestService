@@ -3,6 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
+   <filter>
+       <filter-name>Filter</filter-name>
+       <filter-class>vocabularyRest.Filter</filter-class>
+   </filter>
+    <filter-mapping>
+        <filter-name>Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
     <servlet>
         <servlet-name>CarshopServlet</servlet-name>
         <servlet-class>com.soapservisewithjdbc.CarshopServlet</servlet-class>
@@ -11,5 +19,15 @@
     <servlet-mapping>
         <servlet-name>CarshopServlet</servlet-name>
         <url-pattern>/carshop</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>VocabularyServlet</servlet-name>
+        <servlet-class>vocabularyRest.VocabularyServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>VocabularyServlet</servlet-name>
+        <url-pattern>/vocabulary</url-pattern>
     </servlet-mapping>
 </web-app>
